@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{ 
+  double p, r, t, si;
+
+    printf("Enter principal, rate and time: ");
+    scanf("%lf %lf %lf", &p, &r, &t);
+
+    si = (p * r * t) / 100;
+
+    printf("Simple Interest = %.2lf\n", si);
+
+    return 0;
+}
