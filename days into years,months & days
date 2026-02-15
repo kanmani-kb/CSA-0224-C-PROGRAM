@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int a=1050,b=365,c=30,remainder;
+    float years,months,days;
+    years=a/b;
+    remainder=a%b;
+    printf("years= %.2f\n",years);
+    months=remainder/c;
+    days=remainder%c;
+    printf("months=%.2f\n",months);
+    printf("days=%.2f\n",days);
+    
+    return 0;
+}
