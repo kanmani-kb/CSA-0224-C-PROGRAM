@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+	int a=100,b=30,months,days;
+	months=a/b;
+	days=a%b;
+	printf("months = %d\n",months);
+	printf("days= %d",days);
+	return 0;
+
+}
+
