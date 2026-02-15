@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,q,r;
+    scanf("%d %d",&a,&b);
+    q=a/b;
+    r=a%b;
+    printf("quotient=%d\n",q);
+    printf("remainder=%d",r);
+    
+    return 0;
+}
