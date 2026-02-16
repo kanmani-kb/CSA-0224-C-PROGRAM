@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int M, N, K, i, count = 0;
+
+    printf("Enter M: ");
+    scanf("%d", &M);
+
+    printf("Enter N: ");
+    scanf("%d", &N);
+
+    printf("Enter K: ");
+    scanf("%d", &K);
+
+    for(i = M; i <= N; i++) {
+        if(count == 0) {
+            printf("%d ", i);
+        }
+
+        count++;
+
+        if(count > K) {
+            count = 0;
+        }
+    }
+
+    return 0;
+}
