@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() 
+{ 
+  int n,i,sum=0;
+  scanf("%d",&n);
+  for(i=1;i<=n;i++){
+      sum=sum+(i*i);
+  }
+  printf("the sum of squares of the given n is %d",sum);
+  return 0;
+}
