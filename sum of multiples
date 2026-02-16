@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() 
+{ 
+  int x,i=1,limit;
+  int sum=0;
+  scanf("%d",&x);
+  scanf("%d",&limit);
+  for(i=1;i<=limit;i++){
+      if(i%x==0){
+          sum=sum+i;
+      }
+  }
+  printf("sum of multiples of x is %d",sum);
+  return 0;
+}
