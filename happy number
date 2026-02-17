@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num, sum, digit;
+
+    
+    scanf("%d", &num);
+
+    while (num != 1 && num != 4) {
+        sum = 0;
+
+        while (num > 0) {
+            digit = num % 10;      
+            sum = sum + digit * digit;  
+            num = num / 10;       
+        }
+
+        num = sum;   
+    }
+
+    if (num == 1)
+        printf("Magic Number.");
+    else
+        printf("Not a Magic Number.");
+
+    return 0;
+}
