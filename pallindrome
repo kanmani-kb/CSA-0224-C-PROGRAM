@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int num,reversed=0,digit,p;
+    scanf("%d",&num);
+    p=num;
+    while(num!=0){
+        digit=num%10;
+        reversed=reversed*10+digit;
+        num=num/10;
+    }
+    if(p==reversed)
+    { 
+        printf("the number is pallindrome\n",reversed);
+    }
+    else{
+        printf("the number is not a pallindrome");
+    }
+    return 0;
+}
