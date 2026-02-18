@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    unsigned char num, reversed = 0;
+    int i;
+
+    printf("Enter an 8-bit number (0-255): ");
+    scanf("%hhu", &num);
+
+    for (i = 0; i < 8; i++) {
+        reversed = reversed << 1;     
+        reversed |= (num & 1);        
+        num = num >> 1;               
+    }
+
+    printf("Reversed bit number: %d\n", reversed);
+
+    return 0;
+}
