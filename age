@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int age1, age2;
+
+    printf("Enter two ages: ");
+    scanf("%d %d", &age1, &age2);
+
+    if (age1 >= 60 || age2 >= 60)
+        printf("At least one person is a senior citizen.");
+    else
+        printf("No one is a senior citizen.");
+
+    return 0;
+}
+
+
+
+
