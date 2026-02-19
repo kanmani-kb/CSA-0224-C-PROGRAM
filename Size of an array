@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+
+    int totalSize = sizeof(arr);             
+    int elementSize = sizeof(arr[0]);
+    int length = totalSize / elementSize;    
+
+    printf("Total size (bytes): %d\n", totalSize);
+    printf("Number of elements: %d\n", length);
+
+    return 0;
+}
