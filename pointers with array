@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int a[5] = {10, 20, 30, 40, 50};
+    int *ptr;
+    int i;
+
+    ptr = a;  // pointer points to first element
+
+    printf("Array elements using pointer:\n");
+
+    for(i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+
+    return 0;
+}
