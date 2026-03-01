@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    long fact = 1;
+    int *ptr;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    ptr = &n;
+
+    for(i = 1; i <= *ptr; i++) {
+        fact = fact * i;
+    }
+
+    printf("Factorial = %ld", fact);
+
+    return 0;
+}
