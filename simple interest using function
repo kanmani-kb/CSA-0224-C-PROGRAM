@@ -1,0 +1,14 @@
+#include<stdio.h>
+float si(float p,float r,float t);
+int main(){
+    float sii,p,r,t;
+    scanf("%f%f%f",&p,&r,&t);
+    sii=si(p,r,t);
+    printf("simple interest=%.2f",sii);
+    return 0;
+}
+float si(float p,float r,float t){
+float result;
+result=(p*r*t)/100;
+return result;
+}
