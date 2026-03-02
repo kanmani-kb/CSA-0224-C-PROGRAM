@@ -1,0 +1,15 @@
+#include<stdio.h>
+float circle(float r);
+int main(){
+    int n1;
+    float area;
+    scanf("%d",&n1);
+    area=circle(n1);
+    printf("the area of circle is %.2f",area);
+    return 0;
+}
+float circle(float r){
+    float result;
+    result=3.14*r*r;
+    return result;
+}
