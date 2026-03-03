@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+struct student
+{
+    int roll;
+    float marks;
+};
+
+void printGrade(struct student s)
+{
+    char grade;
+
+    if(s.marks >= 90)
+        grade = 'A';
+    else if(s.marks >= 75)
+        grade = 'B';
+    else if(s.marks >= 50)
+        grade = 'C';
+    else
+        grade = 'F';
+
+    printf("Roll No: %d\n", s.roll);
+    printf("Marks: %.2f\n", s.marks);
+    printf("Grade: %c\n", grade);
+}
+
+int main()
+{
+    struct student s;
+
+    printf("Enter roll number and marks: ");
+    scanf("%d%f", &s.roll, &s.marks);
+
+    printGrade(s);
+
+    return 0;
+}
