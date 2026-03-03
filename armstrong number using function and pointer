@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+int armstrong(int *n)
+{
+    int num = *n;
+    int temp = num, sum = 0, r, count = 0;
+
+    // Count digits
+    while(temp != 0)
+    {
+        count++;
+        temp /= 10;
+    }
+
+    temp = num;
+
+    // Calculate sum of digits power count
+    while(temp != 0)
+    {
+        r = temp % 10;
+        sum += pow(r, count);
+        temp /= 10;
+    }
+
+    if(sum == num)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(armstrong(&n))
+        printf("Armstrong number");
+    else
+        printf("Not Armstrong number");
+
+    return 0;
+}
