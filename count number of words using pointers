@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int countWords(char *str)
+{
+    int count = 0;
+
+    while(*str != '\0')
+    {
+        if(*str == ' ' && *(str+1) != ' ' && *(str+1) != '\0')
+            count++;
+
+        str++;
+    }
+
+    return count + 1;   // First word
+}
+
+int main()
+{
+    char str[100];
+
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    printf("Number of words = %d", countWords(str));
+
+    return 0;
+}
