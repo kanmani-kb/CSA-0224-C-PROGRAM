@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int countSubsets(int arr[], int n, int target) {
+    // Base case
+    if (target == 0)
+        return 1;   // Found one valid subset
+
+    if (n == 0)
+        return 0;   // No elements left
+
+    // If last element is greater than target, ignore it
+    if (arr[n-1] > target)
+        return countSubsets(arr, n-1, target);
+
+    // Include + Exclude the last element
+    return countSubsets(arr, n-1, target - arr[n-1]) +
+           countSubsets(arr, n-1, target);
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4};
+    int n = 4;
+    int target = 5;
+
+    int result = countSubsets(arr, n, target);
+    printf("Number of subsets = %d", result);
+
+    return 0;
+}
